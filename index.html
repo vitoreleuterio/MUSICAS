@@ -43,17 +43,18 @@ Linha 2
                     slide.background = { color: '000000' };
                     
                     // Caixa de texto centralizada
-                    slide.addText(slideText.toUpperCase(), {
-                        x: 0, y: 0,  // Posição inicial no canto superior esquerdo
-                        w: '100%', h: '100%',  // Ocupa toda a área do slide
-                        align: 'center',      // Centralização horizontal
-                        valign: 'middle',      // Centralização vertical
-                        color: 'FFFFFF',
-                        fontSize: 36,
-                        bold: true,
-                        fontFace: 'Arial',
-                         margin: { top: 10, right: 20, bottom: 10, left: 20 }            // Remove margens internas
-                    });
+                  slide.addText(slideText.toUpperCase(), {
+    x: '5%',          // Posição X ajustada para centralizar a caixa
+    y: 0,             // Posição Y no topo
+    w: '90%',         // Largura reduzida para 90%
+    h: '100%',        // Altura total do slide
+    align: 'center',  // Alinhamento horizontal do texto (dentro da caixa)
+    valign: 'middle', // Alinhamento vertical do texto
+    color: 'FFFFFF',
+    fontSize: 36,
+    bold: true,
+    fontFace: 'Arial',
+});
                 });
                 
                 const filename = song.title.replace(/[^\w\s]/gi, '') + '.pptx';
